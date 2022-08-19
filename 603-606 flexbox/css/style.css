@@ -1,0 +1,44 @@
+.caixa {
+    background: red;
+    height: 120px;
+    width: 120px;
+}
+
+.flex-container {
+    background: yellowgreen;
+    display: flex;
+    align-items: flex-start;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    height: 800px;
+}
+
+.flex-item {
+    /* flex-grow: 1; 
+    flex-basis: 320px;
+    flex-shrink: 1; */
+    width: 100%;
+    color: aliceblue;
+    background: red;
+}
+
+/* .flex-item:nth-child(2) {
+    flex: 20 1 320px;
+    background: purple;
+} */
+
+/* .flex-item:nth-child(3) {
+    align-self: flex-end;
+}
+
+.flex-item:nth-child(4) {
+    align-self: center;
+}
+
+.flex-item:nth-child(2) {
+    align-self: stretch;
+} */
+
+.flex-item:nth-child(1) {
+    order: 1;
+}

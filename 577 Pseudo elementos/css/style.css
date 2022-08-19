@@ -1,0 +1,18 @@
+/* Pseudo elemento utilisasse :: (2 dois pontos) */
+/* after coloca o item depois donteudo dentro da tag ou classe selecionado */
+ul li::after {
+    content: '-';
+    background: red;
+    color: white;
+}
+
+/* before antes do conteu selecionado */
+ul li::before {
+    content: '-';
+    background: red;
+    color: white;
+}
+
+p::first-letter {
+    font-size: 50px;
+}

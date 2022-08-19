@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        table td, table th {
+            border: 1px solid #ccc;
+            padding: 5px;
+            text-align: left;
+        }
+
+        table caption {
+            caption-side: bottom;
+            text-align: right;
+            font-style: italic;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        tfoot td, table th {
+            background-color: #ddd;
+        }
+
+        .responsibe-table {
+            max-width: 100%;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>titulo</h1>
+    <div class="responsibe-table">
+    <table>
+        <caption>uma descrição para a tabela</caption>
+        <thead>
+            <tr>
+                <th>titulo 1</th>
+                <th>titulo 2</th>
+                <th>titulo 3</th>
+            </tr>
+
+            <tbody>
+                <tr>
+                    <td>corpo 1</td>
+                    <td>corpo 2</td>
+                    <td>corpo 3</td>
+                </tr>
+                <tr>
+                    <td colspan="2">AQUI</td>
+                    <td rowspan="2">corpo 3</td>
+                </tr>
+                <tr>
+                    <td>corpo 1</td>
+                    <td>corpo 2</td>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="2"></td>
+                    <td>TOTAL</td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td>$555</td>
+                </tr>
+            </tfoot>
+
+        </thead>
+    </table>
+    </div>
+</body>
+</html>

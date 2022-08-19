@@ -1,0 +1,32 @@
+* {
+   margin: 0;
+   padding: 0; 
+}
+body{
+    background-image: url(https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/netflixteaser.png);
+    background-size: cover;
+    background-position: top center;
+}
+
+#heading {
+    background: rgba(0, 0, 0, .7);
+}
+
+#heading div {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+#heading .h1 {
+    font-size: 20px;
+    text-transform: uppercase;
+    padding: 15px;
+}
+
+#heading a {
+    color: #fff;
+    text-decoration: none;
+    font-family: sans-serif;
+}

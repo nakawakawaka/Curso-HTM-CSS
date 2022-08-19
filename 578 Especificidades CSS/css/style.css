@@ -1,0 +1,25 @@
+/* ID, classes, atributos, pseudo-classes, elementos e pseudo-elementos */
+
+/* 
+especificidade
+empate
+style
+!important
+ */
+
+/* ira ser aplicada quem tiver a maior especificidade */
+
+ /* 1, 0, 0 */
+#p {
+    background: red;
+}
+
+/* 1, 0, 0 */
+.p {
+    background: yellow;
+}
+
+/* 0, 0, 1 */
+p {
+    background: blue;
+}

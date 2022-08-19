@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    h1 {
+      background: red;      
+    }
+
+    #cabecalho-dois {
+      background: purple;  
+    }
+
+    .fundo-vermelho {
+      background: red;  
+    }
+    .img-in-txt {
+      width: 50px;
+      height: 30px;
+    }
+</style>
+
+<body>
+    <h1 id="cabecalho-um" class="fundo-vermelho borda-esquerda"> 
+        <!--Duas classes da mesma linha-->
+        Vai vir aqui
+    </h1>
+    <h1 id="cabecalho-dois" class="fundo-vermelho">
+        Vai vir aqui
+    </h1>
+    <p>
+        <b>ipsum</b>, <strong>sit</strong> <i>consectetur</i> <em>adipisicing</em><br>
+
+        <a href="" target="_blank">Consequuntur</a> 
+        <img class="img-in-txt" src="https://logos-world.net/wp-content/uploads/2020/04/Huawei-Logo.png" alt="descricao da imagem"><br>
+
+        <del>nemo</del> <s>ullam</s> <ins>repellat</ins> <u>eligendi</u><br>
+
+         aliquam dignissimos corrupti tempore cum inventore unde expedita mollitia labore quaerat ex praesentium, facere <br>
+         
+         <q cite="link do site de onde foi pego a citacao">molestias</q><br>
+
+         <small>natus.</small><br>
+
+        2<sup>2</sup> H<sub>2</sub>O<br>
+        
+        <pre>
+          <code>
+              function howMany(selectObject) {
+                let numberSelected = 0;
+                for (let i = 0; i < selectObject.options.length; i++) {
+                  if (selectObject.options[i].selected) {
+                    numberSelected++;
+                  }
+                }
+                return numberSelected;
+              }
+              
+              const btn = document.getElementById('btn');
+              
+              btn.addEventListener('click', () => {
+                const musicTypes = document.selectForm.musicTypes;
+                console.log(`You have selected ${howMany(musicTypes)} option(s).`);
+              });
+          </code>  
+      </pre>
+
+    </p>
+    <hr>
+    <blockquote cite="link do site de onde foi pego a citacao">Aqui sim eu estou fazendo um bloco de citacao</blockquote>
+</body>
+</html>

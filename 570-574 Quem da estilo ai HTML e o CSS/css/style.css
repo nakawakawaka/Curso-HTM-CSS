@@ -1,0 +1,105 @@
+div {
+    color: initial;  /*inherit - significa herdar e o navegador vem por padrão essa opção*/
+    margin-left: 20px;
+}
+
+/* classes com espaço no meio seleciona uma classe dentro da outra
+.pai .filha {
+    color: red
+}
+
+classe sem espaço entre elas seleciona apenas se as duas classes estiverem na tag Ex.: <div class:"pai filha">
+.pai.filha {
+    color: red
+} */
+
+/* Este seletor com > (sinal de maior) entre as classes significa que é a classe direta se caso tenha outra tag entre a filha não ira funcionar */
+.pai > .filha > .filha{
+    color: red
+}
+
+.pai > .filha > span > .filha{
+    color: pink
+}
+
+.barra {
+    border: 2px solid;
+    width: 100%;
+    margin: 0;
+}
+
+/* Seletor de irmãos no caso depois de um h1 o proximo p sera selecionado */
+.pai2 h1+p {
+    color: red;    
+}
+
+/* depois de um p o proximo h1 sera selecionado */
+.pai2 p+h1 {
+    color: purple;    
+}
+
+/* todos os p que estao depois do h1 serao selecionados */
+.pai2 h1~p {
+    color: rgb(0, 128, 111);    
+}
+
+/* Selecao por atributo */
+[meu-atributo] {
+    color: aqua;
+}
+
+/* Seleção de pseudo classe */
+.heading:hover {
+    background-color: royalblue;
+}
+
+.heading {
+    transition: all 300ms ease-in-out;
+}
+
+a {
+    color: darkorange;
+}
+
+a:link {
+    color: deeppink;
+}
+
+a:visited {
+    color: firebrick;
+}
+
+a:hover {
+    background: darkblue;
+    color: white;
+    text-decoration: none;
+}
+
+a:active {
+    background: darkcyan;
+    color: white;
+    text-decoration: none;
+}
+
+input:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    outline: none;
+    border: 1px solid black;
+}
+
+input:disabled {
+    background-color: aquamarine;
+    cursor: not-allowed;
+}
+
+input:checked + p {
+    background-color: brown;
+}
+
+input:not(:checked) + p {
+    background-color: yellow;
+}
+
+p:not(.meio) {
+    background: yellowgreen;
+}

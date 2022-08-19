@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+}
+
+/* .filha1, .filha2, .filha3 {
+    width: 300px;
+    height: 300px;
+    background: red;
+    margin: 10px;
+}
+
+.filha1 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.filha2 {
+    background: yellowgreen;
+    position: fixed;
+    top: 30%;
+    right: 0;
+    z-index: 1;
+}
+
+.filha3 {
+    position: relative;
+    background: blue;
+    top: 100px;
+    left: 100px;
+}
+
+.outro {
+    position: absolute;
+    background: wheat;
+    top: 50px;
+    left: 50px;
+} */
+
+ul {
+    height: 100px;
+    overflow: auto;
+}
+
+ul li.sticky {
+    position: sticky;
+    background: gray;
+    top: 0;
+}
