@@ -37,3 +37,17 @@ console.log(`true||false: ${true||false}`);
 console.log(`false||false: ${false||false}`);
 console.log(`!true: ${!true}`);
 console.log(`!!true: ${!!true}`);
+
+/*
+Tudo em javascript pode ser avaliado em true e false
+Valores que retornam false:
+false
+0
+''  ""  `` (strings vazias)
+null / undefined
+NaN
+
+Todos os outros valores sao considerados true
+*/
+console.log('naoki' && 'yumi')
+console.log('naoki' && NaN &&'yumi')
