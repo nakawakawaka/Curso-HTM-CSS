@@ -28,4 +28,5 @@ function formatData(data) {
   const mes = zeroAEsquerda(data.getMonth());
   const ano = zeroAEsquerda(data.getFullYear());
   
+  
 }
