@@ -1,6 +1,7 @@
 //date é uma funcao construtora
 //Uma funcao construtora comeca com a primeira letra maiuscula
 
+/*
 const data = new Date(); // o marco Zero é 01/01/1970 Timestamp unix ou epoca unix mas pode variar de acordo com o fuso horario
 
 //Date(2022, 3, 20, 15, 14, 400) - Ano Mes Dia Hora Minutos Segundo Milesimo de segundo
@@ -18,6 +19,7 @@ console.log('min', data.getMinutes());
 console.log('seg', data.getSeconds());
 console.log('ms', data.getMilliseconds());
 console.log('diaSem', data.getDay()); //domingo = 0 Sabado = 6
+*/
 
 function zeroAEsquerda (num) {
   return num >= 10 ? num : `0${num}`
@@ -25,8 +27,15 @@ function zeroAEsquerda (num) {
 
 function formatData(data) {
   const dia = zeroAEsquerda(data.getDate());
-  const mes = zeroAEsquerda(data.getMonth());
+  const mes = zeroAEsquerda(data.getMonth()+1);
   const ano = zeroAEsquerda(data.getFullYear());
+  const hora = zeroAEsquerda(data.getHours());
+  const min = zeroAEsquerda(data.getMinutes());
+  const seg = zeroAEsquerda(data.getSeconds());
   
-  
+  return `${dia}/${mes}/${ano} ${hora}:${min}:${seg}`
 }
+
+const data = new Date();
+const dataBrasil = formatData(data);
+console.log(dataBrasil)
