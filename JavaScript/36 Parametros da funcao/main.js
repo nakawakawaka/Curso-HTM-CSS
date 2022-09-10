@@ -44,3 +44,17 @@ let arr = ['bruno', 'nakamura', 20];
 
 desestruturacaoArr(arr);
 
+// em vez de utilizar arguments podemos utilizar o resto que mostra da msm maneira todos os argumentos passados
+function conta(operador, acumulador, ...numeros) {
+  for (let numero of numeros) {
+    if(operador === '+') acumulador += numero;
+    if(operador === '-') acumulador -= numero;
+    if(operador === '/') acumulador /= numero;
+    if(operador === '*') acumulador *= numero;
+  }
+  console.log(acumulador);
+}
+conta('+', 0, 20, 30, 40, 50);
+
+
+
