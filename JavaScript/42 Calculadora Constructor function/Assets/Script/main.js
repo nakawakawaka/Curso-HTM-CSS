@@ -1,6 +1,6 @@
 // Ex: Converta a calculadora criada com factory function para uma contructor function
-function CriaCalculadora() {
-        const display = document.querySelector('.display');
+function Calculadora() {
+        this.display = document.querySelector('.display');
         
         //Metodos
         this.inicia = () => {
@@ -9,71 +9,48 @@ function CriaCalculadora() {
         };
 
         this.pressionaEnter = () => {
-            display.addEventListener('keyup', e => {
-                if (e.keyCode === 13) {
-                    this.realizaConta();
-                }
+            document.addEventListener('keyup', e => {
+                if (e.keyCode === 13) this.realizaConta();
             });
         };
 
-        this.realizaConta = () => {
-            let conta = display.value;
-
-            try {
-                conta = eval(conta);
-
-                if(!conta) {
-                    alert('conta invalida');
-                    return;
-                }
-
-                display.value = conta;
-            } catch(e) {
-                alert('conta invalida');
-                return;
-            }
-        };
-
-        this.clearDisplay = () => {
-            display.value = '';
-        };
-
-        this.apagaUm = () => {
-            display.value = display.value.slice(0, -1);
-        };
         
         this.cliqueBotoes = () => {
+            document.addEventListener('click', event => {
+                const el = event.target;
+                if (el.classList.contains('btn-num')) this.addNumDisplay(el);
+                if(el.classList.contains('btn-clear')) this.clear();
+                if(el.classList.contains('btn-del')) this.del();
+                if(el.classList.contains('btn-eq')) this.realizaConta();
+            }
+            )};
             
-            document.addEventListener('click', function(e) {
+            this.addNumDisplay = (el) => {
+                this.display.value += el.innerText;
+                this.display.focus();
+            };
+            
+            this.clear = () => this.display.value = '';
+            this.del = () => this.display.value = this.display.value.slice(0, -1);
+            
+            this.realizaConta = () => {
+                try {
+                    const conta = eval(this.display.value);
                 
-                const el = e.target;
-
-                if (el.classList.contains('btn-num')) {
-                    this.btnParaDisplay(el.innerText);
-                }
-
-                if(el.classList.contains('btn-clear')) {
-                    this.clearDisplay()
-                }
-
-                if(el.classList.contains('btn-del')) {
-                    this.apagaUm();
-                }
-
-                if(el.classList.contains('btn-eq')) {
-                    this.realizaConta();
-                }
-
-            }.bind(this));
+                    if(!conta) {
+                        alert('conta invalida');
+                        return;
+                    }
+                
+                    this.display.value = conta;
+                    } catch(e) {
+                    alert('conta invalida');
+                    return;
+                };
+            };
         };
 
-        this.btnParaDisplay = (valor) => {
-            display.value += valor;
-        };
-
-}
-
-const calculadora = new CriaCalculadora();
+const calculadora = new Calculadora();
 calculadora.inicia();
 
 

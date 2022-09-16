@@ -53,6 +53,7 @@ function criaCalculadora() {
 
                 if (el.classList.contains('btn-num')) {
                     this.btnParaDisplay(el.innerText); // aqui this perde a referencia da calculadora porque quem executa afuncao é o document.addEventListener
+                    this.display.focus();
                 }
 
                 if(el.classList.contains('btn-clear')) {
