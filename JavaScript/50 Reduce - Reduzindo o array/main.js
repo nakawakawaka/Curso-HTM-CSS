@@ -35,7 +35,7 @@ const pessoas = [
 ]
 
 const maisVelha = pessoas.reduce(function(acumulador, valor) {
-    if(acumulador.idade > valor.idade) return acumulador;
+    if(acumulador.idade > valor.idade) return acumulador; // o acumulador receve o primeiro valor do array enquanto o primeiro valor for o maior valor sera retornado o acumulador assim que o valor atigir um valor maior que o acumularo ele retornara o valor por isso nao é necessario o uso do else
     return valor;
 });
 console.log(maisVelha);
