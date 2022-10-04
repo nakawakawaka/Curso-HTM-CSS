@@ -10,7 +10,7 @@ Se o resultado desta conta for maior que 9 o digito que sera considerado Zero
 
 7x 0x 5x 4x 8x 4x 4x 5x 0x 5x
 11 10 9  8  7  6  5  4  3  2 
-77 0  45 32 56 24 20 20 0 = 274
+77 0  45 32 56 24 20 20 0  10 = 284
 
 11- (274 % 11) = 2 (Segundo digto)
 */
