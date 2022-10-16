@@ -74,6 +74,8 @@ class ValidaFormulario {
       this.criaErro(campo, 'CPF inválido.');
       return false;
     }
+
+    return true;
   } 
 
   validaUsuario(campo) {
@@ -90,7 +92,7 @@ class ValidaFormulario {
       valid = false;
     }
 
-    return true;
+    return valid;
   }
 
   criaErro(campo, msg) {

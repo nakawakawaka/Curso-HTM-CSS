@@ -38,7 +38,7 @@ class ValidaCpf {
     if(this.cpfLimpo.length !== 11) return false;
     if(this.eSequencia()) return false;
     this.geraNovoCpf();
-    console.log(this.novoCpf)
+    //console.log(this.novoCpf)
 
     return this.novoCpf === this.cpfLimpo;
   }
