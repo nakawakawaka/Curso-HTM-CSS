@@ -1,0 +1,45 @@
+cd nomeDaPasta (seleciona a pasta onde vao ser instalados os pacotes OBS: nao utilize espacos acentos e nome de modulos com nome da pasta)
+npm init -y (o -y incurta o init)
+
+
+npm install nomeDoPacote (comando para instalar um pacote)
+npm i nomeDoPacote  (comando reduzido)
+
+vercoes
+1.0.0
+
+major minor patch
+1.    0.    0
+
+patch - geralmente muda quando a alguma correcao no programa
+minor - quando algo é adicionado sem quebrar a compatibilidade dos recursos da versao major
+major - quando a versao nao é mais compativel com alguns recurso da versao anterior
+
+^1.0.0 (o acento ^ indica que se ouver uma atualizacao ele podera ser atualizado)
+
+~1.0.0 (o acento ~ indica que apenas o patch porda ser atualizado)
+
+--caso nao queria que a versao mude na hora da instalaco do pacote incluimos ao comando -E (menos E maiusculo) Ex: npm install express -E
+
+npm update (atualiza o pacote)
+
+npm install nomeDoPacote --save-dev (move as dependencias para as dependencias de desenvolvimento)
+
+npm install nomeDoPacote --save-prod (move as dependencias para a producao)
+
+npm install nomeDoPacote@2.1.0 (instala um versao especifica do pacote)
+
+npm install nomeDoPacote@4.x (no caso ira instalar a ultima versao da versao 4)
+
+--Quando instalamos uma vercao especifica e nao colocamos o -E ele ira aparecer o simbolo ^ em sua versao o que significa que minor e patch poderam ser atualizados
+
+npm uninstall nomeDoPacote (desinstala o pacote)
+
+npm ls (lista os pacotes instalados porem tambem mostra as dependencias do pacote)
+
+npm ls --depth=0 (mostra penas a profundidade de pastas desejadas evitando assim abrir uma lista muito grando com todoas as dependencias de um pacote extenso)
+
+npm outdated (mostra os pacotes que estao desatualizados)
+
+
+
