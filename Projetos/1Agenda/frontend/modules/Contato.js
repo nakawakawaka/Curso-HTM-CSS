@@ -6,7 +6,6 @@ export default class ValidaContato {
     }
   
     init() {
-        alert('funciona porra')
       this.events();
     }
   
@@ -14,7 +13,7 @@ export default class ValidaContato {
       if(!this.form) return;
       this.form.addEventListener('submit', e => {
         e.preventDefault();
-        e.validate();
+        this.validate(e);
       });
     }
   
@@ -27,24 +26,25 @@ export default class ValidaContato {
       let error = false;
   
       if(!nomeInput.value) {
-        alert('O campo nome precisa ser preenchido');
+        alert('O campo NOME precisa ser preenchido');
         error = true;
       }
   
       if(!sobrenomeInput.value) {
-        alert('O campo nome precisa ser preenchido');
+        alert('O campo SOBRENOME precisa ser preenchido');
         error = true;
       }
   
-      if(!validator.isEmail(emailInput.value)) {
-        alert('E-mail é inválido');
+      if(!telInput.value && !emailInput.value) {
+        alert('O campo E-mail ou Telefone precisam ser preenchidos');
         error = true;
+      } else if (emailInput.value) {
+        if(!validator.isEmail(emailInput.value)) {
+          alert('E-mail inválido');
+          error = true;
+        }
       }
-  
-      if(!telInput.value || !emailInput.value) {
-        alert('O campo nome precisa ser preenchido');
-        error = true;
-      }
-  
+
+      if(!error) el.submit();
     }
   }
