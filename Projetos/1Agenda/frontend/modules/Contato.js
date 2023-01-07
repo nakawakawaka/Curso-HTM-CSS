@@ -16,7 +16,7 @@ export default class ValidaContato {
         this.validate(e);
       });
     }
-  
+
     validate(e) {
       const el = e.target;
       const nomeInput = el.querySelector('input[name="nome"]');
